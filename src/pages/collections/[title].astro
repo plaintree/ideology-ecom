@@ -1,0 +1,40 @@
+---
+import ProductList from "../../components/ProductList.vue";
+import Layout from "../../layouts/Layout.astro";
+
+export interface PageProps {
+  title: string;
+}
+export function getStaticPaths() {
+  return [
+    { params: { title: "men" } },
+    { params: { title: "women" } },
+    { params: { title: "jewellery" } },
+  ];
+}
+
+const { title } = Astro.params;
+
+let apiString;
+switch (title) {
+  case "men":
+    apiString = "men's%20clothing";
+    break;
+  case "women":
+    apiString = "women's%20clothing";
+    break;
+  case "jewellery":
+    apiString = "jewelery";
+    break;
+}
+
+const res = await fetch(
+  `https://fakestoreapi.com/products/category/${apiString}`
+);
+const data = await res.json();
+---
+
+<Layout>
+  <h1 class="m-8 capitalize text-2xl tracking-wide">{title}</h1>
+  <ProductList products={data} client:load />
+</Layout>
