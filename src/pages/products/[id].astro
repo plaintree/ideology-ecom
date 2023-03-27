@@ -1,5 +1,6 @@
 ---
-import ProductList from "../../components/ProductList.vue";
+import type { ProductProps } from "../../components/CollectionList.vue";
+import ProductDetail from "../../components/ProductDetail.vue";
 import Layout from "../../layouts/Layout.astro";
 
 export interface PageProps {
@@ -7,10 +8,11 @@ export interface PageProps {
 }
 
 const { id } = Astro.params;
+
+const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+const product: ProductProps = await res.json();
 ---
 
 <Layout>
-  <!-- <h1 class="m-8 capitalize text-2xl tracking-wide">{title}</h1>
-  <ProductList category={apiString} client:only="vue" /> -->
-  <h1>YOu reach detail page {id}</h1>
+  <ProductDetail product={product} />
 </Layout>

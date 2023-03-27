@@ -1,5 +1,5 @@
 ---
-import ProductList from "../../components/ProductList.vue";
+import CollectionList from "../../components/CollectionList.vue";
 import Layout from "../../layouts/Layout.astro";
 
 export interface PageProps {
@@ -27,5 +27,5 @@ switch (title) {
 
 <Layout>
   <h1 class="m-8 capitalize text-2xl tracking-wide">{title}</h1>
-  <ProductList category={apiString} client:only="vue" />
+  <CollectionList category={apiString} client:only="vue" />
 </Layout>
