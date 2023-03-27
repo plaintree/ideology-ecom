@@ -1,0 +1,15 @@
+---
+import ProductList from "../../components/ProductList.vue";
+import Layout from "../../layouts/Layout.astro";
+
+export interface PageProps {
+  id: string;
+}
+
+const { id } = Astro.params;
+---
+
+<Layout>
+  <!-- <h1 class="m-8 capitalize text-2xl tracking-wide">{title}</h1>
+  <ProductList category={apiString} client:only="vue" /> -->
+</Layout>

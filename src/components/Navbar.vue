@@ -1,6 +1,8 @@
 <template>
   <nav class="flex shadow-lg items-center px-4 sm:px-8 py-4">
-    <img src="/logo.png" alt="logo" class="w-20 sm:w-40 md:w-52 mx-8" />
+    <a href="/"
+      ><img src="/logo.png" alt="logo" class="w-20 sm:w-40 md:w-52 mx-8"
+    /></a>
     <div class="hidden sm:flex sm:gap-8">
       <a
         href="/collections/new-arrival"

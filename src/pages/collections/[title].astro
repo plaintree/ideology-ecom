@@ -10,6 +10,7 @@ export function getStaticPaths() {
     { params: { title: "men" } },
     { params: { title: "women" } },
     { params: { title: "jewellery" } },
+    { params: { title: "new-arrival" } },
   ];
 }
 
@@ -26,15 +27,13 @@ switch (title) {
   case "jewellery":
     apiString = "jewelery";
     break;
+  case "new-arrival":
+    apiString = "electronics";
+    break;
 }
-
-const res = await fetch(
-  `https://fakestoreapi.com/products/category/${apiString}`
-);
-const data = await res.json();
 ---
 
 <Layout>
   <h1 class="m-8 capitalize text-2xl tracking-wide">{title}</h1>
-  <ProductList products={data} client:load />
+  <ProductList category={apiString} client:only="vue" />
 </Layout>
