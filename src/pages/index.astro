@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CardItem from "../components/CardItem.astro";
+import CardItem from "../components/CardItem.vue";
 import clothing1 from "../images/potriait-clothing-1.jpeg";
 import clothing2 from "../images/potriait-clothing-2.jpeg";
 import clothing3 from "../images/potriait-clothing-3.jpeg";
@@ -8,6 +8,8 @@ import jewellery1 from "../images/potriait-jewellery-1.jpeg";
 import shoe from "../images/potriait-shoe-1.jpeg";
 import wfClothing1 from "../images/clothing-2.jpeg";
 import wfClothing2 from "../images/clothing-4.jpeg";
+
+export const prerender = true;
 ---
 
 <Layout>
