@@ -1,11 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CardItem from "../components/CardItem.vue";
-import clothing1 from "../images/potriait-clothing-1.jpeg";
-import clothing2 from "../images/potriait-clothing-2.jpeg";
-import clothing3 from "../images/potriait-clothing-3.jpeg";
-import jewellery1 from "../images/potriait-jewellery-1.jpeg";
-import shoe from "../images/potriait-shoe-1.jpeg";
+
 import wfClothing1 from "../images/clothing-2.jpeg";
 import wfClothing2 from "../images/clothing-4.jpeg";
 
@@ -22,22 +18,22 @@ export const prerender = true;
       </h1>
     </section>
     <section class="grid grid-cols-2 sm:grid-cols-5 gap-4 px-8">
-      <CardItem title="women" image={clothing1} />
-      <CardItem title="men" image={clothing2} />
-      <CardItem title="shirt" image={clothing3} />
-      <CardItem title="jewellery" image={jewellery1} />
-      <CardItem title="shoes" image={shoe} />
+      <CardItem />
     </section>
     <section
       class="banner-wf bg-cover bg-no-repeat bg-top h-[250px] sm:h-[1000px] flex justify-start items-end m-8"
     >
       <h1 class="text-blakc text-2xl text-center font-semibold p-5">
-        Fall-Winter 2023
+        Fall-Winter 2023/24
       </h1>
     </section>
     <section class="grid grid-cols-2 gap-4 px-8">
-      <a href="/new-arrival/men"><img src={wfClothing1} alt="" /></a>
-      <a href="/new-arrival/women"><img src={wfClothing2} alt="" /></a>
+      <a href="https://youtu.be/N-Sl_zTV_9g" rel="noreferrer" target="_blank"
+        ><img src={wfClothing2} alt="" /></a
+      >
+      <a href="https://youtu.be/WQv2RNq7K_c" rel="noreferrer" target="_blank"
+        ><img src={wfClothing1} alt="" /></a
+      >
     </section>
   </main>
 </Layout>
