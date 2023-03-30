@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import ProductSortingBar from "./CollectionSortingBar.vue";
+import ProductSortingBar from "../collection/CollectionSortingBar.vue";
 
 export interface ProductProps {
   id: number;

@@ -27,11 +27,14 @@
         >About</a
       >
     </div>
-    <div>
+    <div class="sm:ml-auto mr-4">
       <i
-        class="fa-solid fa-bars p-2 mx-4 sm:hidden"
+        class="fa-solid fa-bars p-2 ml-4 sm:hidden"
         @click="isDropdown = !isDropdown"
       ></i>
+      <a href="/cart"
+        ><i class="fa-solid fa-bag-shopping p-2 sm:text-xl"></i
+      ></a>
     </div>
   </nav>
   <div

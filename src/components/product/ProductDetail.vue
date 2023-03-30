@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ProductProps } from "./CollectionList.vue";
+import type { ProductProps } from "../collection/CollectionList.vue";
 
 const { product } = defineProps<{ product: ProductProps }>();
 </script>
