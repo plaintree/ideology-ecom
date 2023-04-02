@@ -8,5 +8,5 @@ const cart = await fetch("https://fakestoreapi.com/carts/1").then((res) =>
 ---
 
 <Layout>
-  <CartItemList products={cart.products} />
+  <CartItemList products={cart.products} client:load />
 </Layout>
