@@ -3,7 +3,7 @@
     <select
       v-model="sortBy"
       @change="$emit('sortBy', sortBy)"
-      class="p-2 outline-none border-b border-b-white hover:border-b-black"
+      class="p-2 outline-none border-b border-b-white hover:border-b-black dark:bg-slate-700"
     >
       <option disabled value="">Sort</option>
       <option value="asc">Ascending</option>
