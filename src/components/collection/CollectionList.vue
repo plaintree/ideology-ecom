@@ -1,5 +1,8 @@
 <template>
-  <ProductSortingBar v-show="!isEmpty && !isLoading" @sort-by="handleSorting" />
+  <CollectionSortingBar
+    v-show="!isEmpty && !isLoading"
+    @sort-by="handleSorting"
+  />
   <section
     class="flex flex-col sm:flex-row gap-3 flex-wrap justify-start items-center sm:items-start m-4 sm:m-16"
     v-show="!isEmpty && !isLoading"
@@ -26,7 +29,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import ProductSortingBar from "./CollectionSortingBar.vue";
+import CollectionSortingBar from "./CollectionSortingBar.vue";
 
 export interface ProductProps {
   id: number;

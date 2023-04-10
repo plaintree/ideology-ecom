@@ -1,0 +1,12 @@
+---
+import CartItemList from "../components/cart/CartItemList.vue";
+import Layout from "../layouts/Layout.astro";
+
+const cart = await fetch("https://fakestoreapi.com/carts/1").then((res) =>
+  res.json()
+);
+---
+
+<Layout>
+  <CartItemList products={cart.products} client:load />
+</Layout>
